@@ -39,5 +39,7 @@ export class VehiclesListDetailComponent implements OnInit {
        console.log(veh);
        this.vehInput.setValue(veh);
      });
+
+
   }
 }

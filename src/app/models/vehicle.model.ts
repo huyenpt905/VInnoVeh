@@ -1,12 +1,12 @@
 export class VehicleModel {
-  id: number;
-  idOwner: number;
-  licensePlate: string;
-  color: string;
-  lable: string;
-  kindOf: string;
-  currentKM: number;
-  pricePerDay: number;
-  pricePerKm: number;
-  status: string;
+  ID: number;
+  IDowner: number;
+  LPC: string;
+  Color: string;
+  Lable: string;
+  KindOf: string;
+  CurrentKM: number;
+  PricePerDay: number;
+  PricePerKm: number;
+  CarStatus: string;
 }
