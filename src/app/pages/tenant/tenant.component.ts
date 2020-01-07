@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserModel } from '../../models/user.model';
+// import { UserModel } from '../../models/user.model';
 
 @Component({
   selector: 'app-tenant',
@@ -7,7 +7,7 @@ import { UserModel } from '../../models/user.model';
   styleUrls: ['./tenant.component.scss']
 })
 export class TenantComponent implements OnInit {
-  tenants: any = [];
+  // tenants: any = [];
   constructor() { }
 
   ngOnInit() {

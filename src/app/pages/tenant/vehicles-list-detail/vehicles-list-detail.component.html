@@ -8,39 +8,46 @@
   </nav>
 </div>
 <div class="container">
-  <div class="vehicle">
-    <div class="vehicle__img">
-      <img src="../../../../assets/img-xe.jpg" alt="">
-      <form>
-        <div class="form-group">
-          <label for="exampleFormControlFile1">Thay đổi ảnh</label>
-          <input type="file" class="form-control-file" id="exampleFormControlFile1">
-        </div>
-      </form>
-    </div>
+  <div class="vehicle" [formGroup]="vehInput">
+<!--    <div class="vehicle__img">-->
+<!--      <img src="../../../../assets/img-xe.jpg" alt="">-->
+<!--      <form>-->
+<!--        <div class="form-group">-->
+<!--          <label for="exampleFormControlFile1">Thay đổi ảnh</label>-->
+<!--          <input type="file" class="form-control-file" id="exampleFormControlFile1">-->
+<!--        </div>-->
+<!--      </form>-->
+<!--    </div>-->
+
+    <label class="vehicle__input">ID:
+      <input formControlName="ID" class="form-control" type="text" placeholder="Default input" >
+    </label>
     <label class="vehicle__input">Biển số:
-      <input class="form-control" type="text" placeholder="Default input">
+      <input formControlName="LPC" class="form-control" type="text" placeholder="Default input" >
     </label>
     <label class="vehicle__input">Cơ sở:
-      <input class="form-control" type="text" placeholder="Default input">
+      <input formControlName="IDowner" class="form-control" type="text" placeholder="Default input">
     </label>
     <label class="vehicle__input">Tên xe:
-      <input class="form-control" type="text" placeholder="Default input">
+      <input formControlName="Lable" class="form-control" type="text" placeholder="Default input">
     </label>
-    <label class="vehicle__input">Số lượng:
-      <input class="form-control" type="text" placeholder="Default input">
+    <label class="vehicle__input">Giá mỗi ngày
+      <input formControlName="PricePerDay" class="form-control" type="text" placeholder="Default input">
     </label>
     <label class="vehicle__input">Màu xe:
-      <input class="form-control" type="text" placeholder="Default input">
+      <input formControlName="Color" class="form-control" type="text" placeholder="Default input">
     </label>
     <label class="vehicle__input">Nhãn hiệu:
-      <input class="form-control" type="text" placeholder="Default input">
+      <input formControlName="KindOf" class="form-control" type="text" placeholder="Default input">
     </label>
     <label class="vehicle__input">Giá trị công tơ mét hiện tại:
-      <input class="form-control" type="text" placeholder="Default input">
+      <input formControlName="CurrentKM" class="form-control" type="text" placeholder="Default input">
     </label>
     <label class="vehicle__input">Giá mỗi Km:
       <input class="form-control" type="text" placeholder="Default input">
+    </label>
+    <label class="vehicle__input">Trạng thái:
+      <input formControlName="CarStatus" class="form-control" type="text" placeholder="Default input">
     </label>
   </div>
   <div class="vehicle__save">
