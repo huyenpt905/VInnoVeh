@@ -1,0 +1,30 @@
+@import "../../../sass/variables";
+@import "../../../sass/mixins";
+
+.f-sub {
+  position: relative;
+  bottom: 0;
+  border-top: 2px solid $c-main;
+  text-align: center;
+  padding: 2rem 0;
+  .f-sub-nav {
+    li {
+      display: inline-block;
+      a {
+        &:hover {
+          text-decoration: none;
+          color: $c-main;
+        }
+      }
+      span {
+        margin: 0 20px;
+      }
+    }
+  }
+  .f-sub-copyright {
+    span {
+      font-weight: bold;
+      color: $c-main;
+    }
+  }
+}

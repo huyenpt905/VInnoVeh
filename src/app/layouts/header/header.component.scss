@@ -1,0 +1,93 @@
+@import "../../../sass/variables";
+@import "../../../sass/mixins";
+
+.btn-signup {
+  border: 1px solid;
+  border-radius: 10px;
+  &:hover {
+    border-color: $c-main;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+}
+
+header {
+  -webkit-box-shadow: 0 6px 6px -6px #777;
+  -moz-box-shadow: 0 6px 6px -6px #777;
+  box-shadow: 0 6px 6px -6px #777;
+  position: relative;
+  .container-fluid {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .navbar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .h-logo {
+    display: inline-block;
+    width: 200px;
+  }
+  .h-link {
+    &:hover {
+      color: $c-main;
+    }
+  }
+  .h-email {
+    color: $c-main;
+    &:hover {
+      -webkit-transform: scale(1.5);
+      -moz-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      -o-transform: scale(1.5);
+      transform: scale(1.5);
+    }
+  }
+  .icon-bar {
+    background-color: $c-main;
+    width: 20px;
+    height: 3px;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .h-user {
+    margin-top: 5px;
+    &__btn {
+      background-color: #fff;
+      width: 120%;
+      display: inline-block;
+      outline: none;
+      border: none;
+    }
+    .dropdown-toggle::after {
+      display: none;
+    }
+    &__name {
+      padding-right: 20px;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        border-top: 8px solid $c-main;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        bottom: 5px;
+        right: 1px;
+      }
+    }
+    &__avt {
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+    }
+  }
+}

@@ -1,0 +1,116 @@
+@import "../../../../sass/variables";
+@import "../../../../sass/mixins";
+
+.vehicles {
+  &__add{
+    text-align: right;
+    transition: 0.4s ease;
+    font-weight: bold;
+    .icon-add{
+      i{
+        border: 1px solid #212529;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        line-height: 20px;
+        text-align: center;
+      }
+    }
+    &:hover{
+      font-size: 15px;
+    }
+  }
+  &__item {
+    padding:20px;
+    text-align: center;
+    margin:10px 0;
+    position: relative;
+
+    .form-group{
+      line-height: 35px;
+      padding-bottom:10px;
+      label{
+        float: left;
+        width: 30%;
+      }
+      select{
+        font-size: 14px;
+        float:left;
+        width: 60%;
+      }
+      span{
+        float: left;
+        width: 10%;
+      }
+    }
+    .discounts__txt{
+      padding:5px 0;
+      margin:0;
+    }
+    .seemore {
+      position: absolute;
+      //top: 50%;
+      //left: 50%;
+      //transform: translate(-50%, -50%);
+      top: 10px;
+      left: 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color:  #dc4e22;
+      line-height: 40px;
+      transition: 0.4s ease;
+
+      &:hover{
+        transform: scale(1.1);
+      }
+      .fa-eye {
+        color: #fff;
+      }
+    }
+    @include box-shadow;
+  }
+}
+
+.add-vehicle {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  color: $c-main;
+  line-height: 80px;
+  bottom: 40px;
+  right: 40px;
+  font-size: 3rem;
+  text-align: center;
+  box-shadow: 0 0 0 3px $c-main;
+  cursor: pointer;
+  //-webkit-transition: color 0.3s;
+  //-moz-transition: color 0.3s;
+  transition: all 1s;
+  //&::after {
+  //  ////z-index: 1;
+  //  //top: -1;
+  //  //left: -1;
+  //  padding: 2px;
+  //  //background-color: yellow;
+  //  -webkit-transition: transform 0.2s, opacity 0.2s;
+  //  -moz-transition: transform 0.2s, opacity 0.2s;
+  //  -ms-transition: transform 0.2s, opacity 0.2s;
+  //  -o-transition: transform 0.2s, opacity 0.2s;
+  //  transition: transform 0.2s, opacity 0.2s;
+  //}
+
+  &:hover i{
+    //-webkit-transition: all .3s;
+    //-moz-transition: all 1s;
+    //-ms-transition: all 1s;
+    //-o-transition: all 1s;
+    transition: all .3s;
+    -webkit-transform: scale(0.65);
+    -moz-transform: scale(0.65);
+    -ms-transform: scale(0.65);
+    -o-transform: scale(0.65);
+    transform: scale(0.65);
+  }
+}

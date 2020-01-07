@@ -1,0 +1,55 @@
+@import "../../../sass/variables";
+@import "../../../sass/mixins";
+
+/*
+* tenant-menu : menu làm nhà xe
+*/
+.tenant-menu {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    width: calc(100%/4 - 3px);
+    text-align: center;
+    list-style: none;
+    background-color: $c-main;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    @include respond-to(break-md) {
+
+    }
+    padding: 1rem 0;
+    a{
+      color:#fff;
+    }
+    &:last-child {
+      border-right: none;
+    }
+    &:hover{
+      background:#0286c7;
+      a{
+        color:#fff;
+      }
+    }
+    &:active{
+      background:#0286c7;
+    }
+    &:focus{
+      background:#0286c7;
+    }
+  }
+  &__link {
+
+  }
+  &__txt {
+    display: none;
+    @include respond-to(break-lg) {
+      display: inline;
+    }
+  }
+}

@@ -1,0 +1,239 @@
+@import "../../../../sass/variables";
+@import "../../../../sass/mixins";
+.owner__item-detail{
+  //display: none;
+  transition: 0.4s ease;
+  &-hien{
+    display: block;
+  }
+  .input-group{
+    padding:10px 0;
+    label{
+      width: 150px;
+    }
+  }
+  .table tr td{
+    text-align:   center;
+    padding:15px 0;
+  }
+  input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+
+  .number-input {
+    border: 1px solid #ddd;
+    //display: inline-flex;
+    //margin: 0.5rem;
+  }
+
+  .number-input button {
+    outline:none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 1rem;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+  }
+
+  .number-input button:before,
+  .number-input button:after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 1rem;
+    height: 2px;
+    background-color: #212121;
+    transform: translate(-50%, -50%);
+  }
+  .number-input {
+    button.plus:after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+  .number-input {
+    input[type=number] {
+      width: 3rem;
+      //padding: .5rem;
+      border: solid #ddd;
+      border-width: 2px 2px;
+      font-size: 1.25rem;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}
+.info-owner {
+  background: $bg-body;
+  margin-top: -1.5rem;
+  padding: 1.5rem 0;
+  &__top{
+    @include box-shadow;
+    background: #fff;
+    padding: 1rem;
+    @include respond-to(break-md) {
+      padding: 1.5rem;
+    }
+  }
+  &__bottom{
+    @include box-shadow;
+    background: #fff;
+    padding: 1rem;
+    @include respond-to(break-md) {
+      padding: 1.5rem;
+    }
+    .info-owner-row{
+      &>.col-md-3 {
+        -ms-flex: 0 0 28%;
+        flex: 0 0 28%;
+        max-width: 28%;
+      }
+      &>.col-md-9 {
+        -ms-flex: 0 0 72%;
+        flex: 0 0 72%;
+        max-width: 72%;
+      }
+    }
+
+  }
+  &__left {
+    padding-top:10px;
+    img {
+      margin-bottom: 1rem;
+      width: 100%;
+      height: 100%;
+
+    }
+    table {
+      text-align: center;
+      td {
+        vertical-align: middle;
+        //font-size: 1.25rem;
+      }
+      input[type="number"] {
+        -webkit-appearance: textfield;
+        -moz-appearance: textfield;
+        //appearance: textfield;
+      }
+
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+      }
+
+      .number-input {
+        border: 1px solid #ddd;
+        display: inline-flex;
+        margin: 0.5rem;
+      }
+
+      .number-input button {
+        outline:none;
+        -webkit-appearance: none;
+        background-color: transparent;
+        border: none;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 3rem;
+        cursor: pointer;
+        margin: 0;
+        position: relative;
+      }
+
+      .number-input button:before,
+      .number-input button:after {
+        display: inline-block;
+        position: absolute;
+        content: '';
+        width: 1rem;
+        height: 2px;
+        background-color: #212121;
+        transform: translate(-50%, -50%);
+      }
+      .number-input {
+        button.plus:after {
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+      }
+      .number-input {
+        input[type=number] {
+          width: 3rem;
+          padding: .5rem;
+          border: solid #ddd;
+          border-width: 0 2px;
+          font-size: 1.25rem;
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+    }
+  }
+  &__btn {
+    @include respond-to(break-sm) {
+      width: 200px;
+      margin: 20px auto;
+
+    }
+  }
+
+  &__right {
+    img {
+      width: 100%;
+      height: 100px;
+    }
+    h6 {
+      //text-align: right;
+      margin-right: 40px;
+      margin-top: 1.5rem;
+    }
+    @include respond-to(break-md) {
+      display: block;
+      .img-sub{
+        box-shadow:0 4px 8px 0 rgba(0,0,0,0.5),
+        0 2px 4px 0 rgba(0,0,0,0.4);
+      }
+    }
+  }
+  &__rating {
+    width: 80%;
+    margin-left: auto;
+    .rating, p {
+      text-align: right;
+      display: block;
+      padding-right: 40px;
+    }
+  }
+  &-order{
+    background: #fff;
+    padding: 1rem;
+    margin-top:1rem;
+    @include box-shadow;
+    table tr {
+      border-bottom:1px solid #eaeaea;
+      th{
+        text-align: center;
+        font-weight:bold;
+        padding: 10px 2px;
+      }
+      td{
+        text-align: center;
+        padding:8px 0;
+      }
+      &:last-child{
+        font-weight:bold;
+      }
+    }
+  }
+}

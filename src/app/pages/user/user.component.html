@@ -1,0 +1,150 @@
+<section class="schedule">
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="g-nav">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Hướng dẫn thuê xe</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="schedule__intro">
+      <h3>Chào mừng bạn đến với trang web thuê xe tự lái của VinFast</h3>
+      <p>Chỉ cần nhập điểm đến, nhận ngày và trả, website sẽ cung cấp cho người dùng <br>
+        danh sách cơ sở cho thuê được hiển thị theo đánh giá... <br>
+        để khách hàng có thể lựa chọn cho mình xe phù hợp nhất</p>
+    </div>
+
+    <div class="schedule__form row">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-8">
+            <div class="row">
+              <div class="form-group col-12 col-lg-8">
+                <div class="form-group"> Địa điểm nhận xe
+                  <label class="d-flex">
+                    <select name="cars" class="custom-select schedule__city">
+                      <option value="xemay" selected>Hà Nội</option>
+                      <option value="ototulai">Đà Nẵng</option>
+                      <option value="ototulai">Hồ Chí Minh </option>
+                    </select>
+                    <input class="form-control schedule__agency" type="text" placeholder="Chọn một địa điểm">
+                  </label>
+                </div>
+              </div>
+              <div class="form-group col-6 col-lg-4">
+                <label> Loại xe
+                  <select name="cars" class="custom-select">
+                    <option value="xemay" selected>Xe máy</option>
+                    <option value="ototulai">Xe ô tô tự lái </option>
+                  </select>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="row">
+              <div class="form-group col-6">
+                <label>Ngày nhận xe
+                  <input class="form-control" max="3000-12-31" min="2000-01-01"
+                         name="" type="date">
+                </label>
+              </div>
+              <div class="form-group col-6">
+                <label>Ngày trả xe
+                  <input class="form-control" max="3000-12-31" min="2000-01-01"
+                         name="" type="date">
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="schedule__search">
+      <div class="container">
+        <div class="row">
+          <a href="" class="btn btn-radius btn--main btn--search">Tìm kiếm  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--result search-->
+<section class="info">
+  <div class="container">
+    <div class="row">
+      <div class="info__left col-6">
+        <p class="info__txt">Hà Nội</p>
+        <p class="info__txt">Xe ô tô - Tự lái</p>
+        <p class="info__txt">4 - 7 chỗ ngồi</p>
+      </div>
+
+      <div class="info__right col-6">
+        <label class="info__date">
+          <input class="form-control" type="date">
+        </label>
+        <label class="info__date">
+          <input class="form-control" type="date">
+        </label>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--show-search-->
+<section class="show-search">
+  <div class="container">
+    <div class="show-search__top row">
+      <div class="col-6">
+        <button class="btn-mapview"><span class="icon-map"></span>Map view</button>
+        <span>10 kết quả tìm kiếm</span>
+      </div>
+      <div class="col-6">
+        <form>
+          <label>Bộ lọc
+            <select name="filter" class="custom-select">
+              <option selected>Đánh giá</option>
+              <option value="">Giá cả</option>
+              <option value="">Hot deal</option>
+            </select>
+          </label>
+        </form>
+      </div>
+    </div>
+
+    <div class="owner">
+      <div class="owner__item">
+        <div class="row">
+          <div class="col-md-12 col-lg-4">
+            <div class="owner__img">
+              <img src="" alt="xe">
+            </div>
+          </div>
+          <div class="owner__info col-md-8 col-lg-5">
+            <p class="font-weight-bold">Cơ sở: CS1</p>
+            <p><span class="font-weight-bold">Địa chỉ:</span> Vingroup</p>
+            <p><span class="font-weight-bold">Giá:</span> </p>
+          </div>
+          <div class="owner__info owner__info--left col-md-4 col-lg-3">
+            <div class="owner__rating g-rating">
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <p>10 người đánh giá</p>
+            </div>
+            <div class="owner__btn">
+              <a routerLink="detailvehicle">Xem chi tiết</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<router-outlet></router-outlet>

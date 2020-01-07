@@ -1,0 +1,255 @@
+@import "../../../sass/variables";
+@import "../../../sass/mixins";
+
+.schedule {
+  background-color: #008ca8;
+  padding-bottom: 1rem;
+  @include respond-to(break-md) {
+    background-image:  linear-gradient(
+        rgba(97, 205, 239, 0.26),
+        rgba(96, 205, 239, 0.02)
+    ), url("../../../assets/bg-header.jpg");
+    -webkit-background-size: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 600px;
+    padding-bottom: 0;
+    position: relative;
+    top: 50%;
+  }
+
+  &__form {
+    @include respond-to(break-md) {
+      padding-top: 2rem;
+      margin: 0 auto;
+    }
+    label {
+      color: #000;
+      font-size: 0.875rem;
+      width: 100%;
+      input {
+        display: block;
+      }
+    }
+
+  }
+
+  &__search {
+    display: block;
+    @include respond-to(break-sm) {
+      width: 35%;
+      margin-right: 20px;
+      margin-left: auto;
+    }
+    @include respond-to(break-md) {
+      width: 25%;
+      margin-top: 30px;
+    }
+    .btn--search {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+  }
+
+  &__intro {
+    display: none;
+    position: absolute;
+    bottom:5%;
+    right: 10%;
+    @include respond-to(break-md) {
+      display: block;
+    }
+    h3, p {
+      color: #fff;
+    }
+    h3 {
+      font-size: 1.2rem;
+    }
+    p {
+      opacity: 0.8;
+      font-size: 0.875rem;
+    }
+  }
+
+  &__city {
+    display: inline-block;
+    width: 40%;
+  }
+
+  //&__agency {
+  //  display: inline-block;
+  //  width: 60%;
+  //}
+}
+
+.info {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  &__txt {
+    margin-bottom: 0;
+  }
+
+  &__left {
+    position: relative;
+    padding-left: 60px;
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../../../assets/icon-search.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-background-size: 80%;
+      background-size: 80%;
+      width: 35px;
+      height: 35px;
+      left: 1rem;
+      top: 20px;
+      border: 1px solid;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+    }
+  }
+
+  &__right {
+    @include respond-to(break-md) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__date {
+    width: 100%;
+
+    @include respond-to(break-md) {
+      width: 45%;
+      margin-right: -4px;
+    }
+
+  }
+}
+
+// show-search --- danh sach tim kiem
+.show-search {
+  background: $bg-body;
+  margin-top: 1rem;
+  padding: 2rem 0;
+
+  &__top {
+    span {
+      display: block;
+      font-style: italic;
+      @include respond-to(break-md) {
+        display: inline-block;
+        margin-left: 2rem;
+      }
+    }
+    .btn-mapview {
+      padding: 10px 25px;
+      background-color: #fff;
+      border: none;
+      @include respond-to(break-md) {
+        padding-left: 0;
+      }
+      &:focus {
+        background: $c-main;
+      }
+      .icon-map {
+        display: inline-block;
+        margin-right: 5px;
+        width: 20px;
+        height: 20px;
+        background-image: url(../../../assets/icon-map.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        background-size: cover;
+      }
+    }
+
+    label {
+      width: 100%;
+      @include respond-to(break-md) {
+        width: auto;
+        display: block;
+        text-align: right;
+      }
+      .custom-select{
+        @include respond-to(break-md) {
+          width: auto;
+        }
+      }
+      select {
+        background-color: $c-main;
+        color: #fff;
+      }
+
+    }
+  }
+
+  .owner {
+    padding: 1rem;
+    margin-top: 1rem;
+    background: #fff;
+    transition: 0.4s ease;
+    @include box-shadow;
+    &:hover{
+      box-shadow: 0px 14px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+      img{transform: scale(1.06);}
+    }
+    &__img {
+      overflow: hidden;
+
+      width: 100%;
+      height: 100%;
+      img {
+        transition: 0.4s ease;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__info {
+      @include respond-to(break-md) {
+        margin-top: 1.5rem;
+      }
+
+      &--left {
+        display: flex;
+        justify-content: space-between;
+        @include respond-to(break-md) {
+          display: block;
+        }
+        @include respond-to(break-lg) {
+          display: block;
+          text-align: right;
+        }
+      }
+    }
+
+    &__btn {
+      width: auto;
+      text-align: center;
+      a {
+        display: block;
+        border: 1px solid $c-main;
+        padding: 10px 15px;
+        font-size: 19px;
+        font-weight: bold;
+        color: $c-main;
+        &:hover {
+          background-color: $c-main;
+          text-decoration: none;
+          color: #fff;
+        }
+
+      }
+    }
+
+    &__rating {
+      width: fit-content;
+      padding-right: 60px;
+
+    }
+  }
+}

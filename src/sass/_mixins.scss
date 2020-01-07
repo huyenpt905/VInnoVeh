@@ -1,0 +1,49 @@
+/*
+* mixin responsive --   MOBILE-FIRST !!!
+*/
+$break-sm: 576px;
+$break-md: 768px;
+$break-lg: 992px;
+$break-xl: 1200px;
+// and (max-width: $break-md - 1)
+@mixin respond-to($media) {
+  @if $media == break-sm {
+    @media only screen and (min-width: $break-sm) { @content; }
+  }
+  @else if $media == break-md {
+    @media only screen and (min-width: $break-md) { @content; }
+  }
+  @else if $media == break-lg {
+    @media only screen and (min-width: $break-lg) { @content; }
+  }
+  @else if $media == break-xl {
+    @media only screen and (min-width: $break-xl) { @content; }
+  }
+}
+
+/*
+*box-shadow
+*/
+@mixin box-shadow {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12),
+  0 2px 4px 0 rgba(0,0,0,0.08);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12),
+  0 2px 4px 0 rgba(0,0,0,0.08);
+  box-shadow:0 4px 8px 0 rgba(0,0,0,0.12),
+  0 2px 4px 0 rgba(0,0,0,0.08);
+}
+
+/*
+hover-item
+*/
+
+@mixin  hover-scale($scale) {
+
+  -webkit-transform: scale($scale);
+  -moz-transform: scale($scale);
+  -ms-transform: scale($scale);
+  -o-transform: scale($scale);
+  transform: scale($scale);
+
+}
+

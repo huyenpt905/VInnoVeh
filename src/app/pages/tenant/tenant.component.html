@@ -1,0 +1,56 @@
+<div class="container">
+  <nav class="tenant-menu">
+    <!-- Links -->
+    <ul class="tenant-menu__list">
+      <li class="tenant-menu__item">
+        <a class="tenant-menu__link active" routerLink="rental-list">
+          <img src="../../../../assets/ds.png" alt="" class="img-responsive">
+          <span class="tenant-menu__txt"> Danh sách thuê</span>
+        </a>
+        <!--<span class="tenant-menu__line">|</span>-->
+      </li>
+      <li class="tenant-menu__item">
+        <a class="tenant-menu__link" routerLink="vehicles-list">
+          <img src="../../../../assets/thongtinb.png" alt="" class="img-responsive">
+          <span class="tenant-menu__txt"> Kho xe</span>
+        </a>
+      </li>
+      <li class="tenant-menu__item">
+        <a class="tenant-menu__link" href="">
+          <img src="../../../../assets/lichb.png" alt="" class="img-responsive">
+          <span class="tenant-menu__txt"> Lịch</span>
+        </a>
+        <!--<span class="tenant-menu__line">|</span>-->
+      </li>
+      <li class="tenant-menu__item">
+        <a class="tenant-menu__link" href="">
+          <img src="../../../../assets/danhgia.png" alt="" class="img-responsive">
+          <span class="tenant-menu__txt"> Đánh giá </span>
+        </a>
+        <!--<span class="tenant-menu__line">|</span>-->
+      </li>
+      <!--    <li class="tenant-menu__item">-->
+      <!--      <a class="tenant-menu__link" href="">-->
+      <!--        <img src="../../../../assets/bd.png" alt="" class="img-responsive">-->
+      <!--        <span class="tenant-menu__txt"> Biểu đồ</span>-->
+      <!--      </a>-->
+      <!--<span class="tenant-menu__line">|</span>-->
+      <!--    </li>-->
+      <!--    <li class="tenant-menu__item">-->
+      <!--      <a class="tenant-menu__link" href="">-->
+      <!--        <img src="../../../../assets/km.png" alt="" class="img-responsive">-->
+      <!--        <span class="tenant-menu__txt"> Khuyến mãi</span>-->
+      <!--      </a>-->
+      <!--    </li>-->
+    </ul>
+  </nav>
+</div>
+
+<!--<ul *ngFor="let tenant of tenants">-->
+<!--  <li>{{ tenant.name}}</li>-->
+<!--</ul>-->
+
+<router-outlet></router-outlet>
+
+
+
