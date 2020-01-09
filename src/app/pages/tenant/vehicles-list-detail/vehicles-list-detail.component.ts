@@ -3,6 +3,8 @@ import { VehicleModel } from '../../../models/vehicle.model';
 import { VehicleService} from '../../../services/vehicle.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
+import {HttpHeaders} from '@angular/common/http';
+
 
 @Component({
   selector: 'app-vehicles-list-detail',
@@ -11,12 +13,11 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class VehiclesListDetailComponent implements OnInit {
   idVeh = '';
-  // vehicle;
 
   vehInput = this.fb.group({
     ID: [''],
     LPC: [''],
-    IDowner: [''],
+    TenantID: [''],
     Color: [''],
     Lable: [''],
     KindOf: [''],
@@ -34,12 +35,18 @@ export class VehiclesListDetailComponent implements OnInit {
 
   ngOnInit() {
      this.idVeh = this.activatedRoute.snapshot.paramMap.get('idVeh');
-
      this.vehicleService.getVehicleById(this.idVeh).subscribe(veh => {
-       console.log(veh);
+      //  console.log(veh);
        this.vehInput.setValue(veh);
      });
+  }
 
-
+  onUpdateInfoVehicle() {
+    this.vehicleService.updateVehicle(this.vehInput.value).subscribe(
+      function() {
+        alert("Cập nhật thành công");
+      }
+    );
+    // console.log(this.vehInput.value);
   }
 }

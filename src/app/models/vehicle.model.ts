@@ -1,6 +1,6 @@
 export class VehicleModel {
   ID: number;
-  IDowner: number;
+  TenantID: number;
   LPC: string;
   Color: string;
   Lable: string;
