@@ -1,10 +1,10 @@
 export class BillModel {
-  id: number;
-  idOwner: number;
-  idCustomer: number;
-  idVehicle: number;
-  startTime: number;
-  stopTime: number;
-  prepay: number;
+  ID: number;
+  TenantID: number;
+  CustomerID: number;
+  CarID: number;
+  StartTime: number;
+  StopTime: number;
+  Prepay: number;
   completed: boolean;
 }

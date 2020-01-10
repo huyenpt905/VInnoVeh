@@ -1,15 +1,14 @@
 import { Injectable } from '@angular/core';
 import { VehicleModel} from '../models/vehicle.model';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Observable, of} from 'rxjs';
-import {catchError, tap} from 'rxjs/operators';
+import {Observable} from 'rxjs';
 import { UserService } from './user.service';
 
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type':  'application/json',
-  })
-};
+// const httpOptions = {
+//   headers: new HttpHeaders({
+//     'Content-Type':  'application/json',
+//   })
+// };
 
 @Injectable({
   providedIn: 'root'

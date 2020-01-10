@@ -15,8 +15,6 @@ import {UserComponent} from './pages/user/user.component';
 // other
 import {NotFoundComponent} from './pages/not-found/not-found.component';
 import {LoginComponent} from './pages/login/login.component';
-import {compareNumbers} from '@angular/compiler-cli/src/diagnostics/typescript_version';
-import {BillComponent} from './pages/tenant/bill/bill.component';
 
 const routes: Routes = [
   {
@@ -27,7 +25,6 @@ const routes: Routes = [
       { path: 'vehicles-list-detail/:idVeh', component: VehiclesListDetailComponent },
       { path: 'add-vehicle', component: AddVehicleComponent },
       { path: 'rental-list', component: RentalListComponent },
-      { path: 'bill', component: BillComponent },
       { path: '', component: RentalListComponent }
     ]
   },
@@ -39,7 +36,7 @@ const routes: Routes = [
     ]
   },
   { path: 'login', component: LoginComponent },
-  { path: '', redirectTo: '/bill', pathMatch: 'full'},
+  { path: '', redirectTo: '/user', pathMatch: 'full'},
   { path: '**', component: NotFoundComponent}
 ];
 

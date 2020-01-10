@@ -15,7 +15,6 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { DetailvehicleComponent } from './pages/user/detailvehicle/detailvehicle.component';
 import { VehiclesListDetailComponent } from './pages/tenant/vehicles-list-detail/vehicles-list-detail.component';
 import { AddVehicleComponent } from './pages/tenant/add-vehicle/add-vehicle.component';
-import { BillComponent } from './pages/tenant/bill/bill.component';
 import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
@@ -31,8 +30,7 @@ import {ReactiveFormsModule} from '@angular/forms';
     NotFoundComponent,
     DetailvehicleComponent,
     VehiclesListDetailComponent,
-    AddVehicleComponent,
-    BillComponent
+    AddVehicleComponent
   ],
   imports: [
     BrowserModule,

@@ -33,6 +33,6 @@ export class AddVehicleComponent implements OnInit {
         this.router.navigate([" '/tenant/vehicles-list' "]);
       }
     )
-  console.log(this.vehAddInput.value);
+  // console.log(this.vehAddInput.value);
   }
 }

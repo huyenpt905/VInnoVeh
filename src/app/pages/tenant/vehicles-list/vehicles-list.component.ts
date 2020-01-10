@@ -13,11 +13,8 @@ export class VehiclesListComponent implements OnInit {
   constructor( private vehicleService: VehicleService ) { }
 
   ngOnInit() {
-    this.vehicleService.getAll().subscribe( (data: VehicleModel[]) => {
-      // console.log(data);
+    this.vehicleService.getAll().subscribe((data: VehicleModel[]) => {
       return this.vehicles = data;
     });
-
-    
   }
 }
