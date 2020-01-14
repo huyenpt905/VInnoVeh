@@ -13,15 +13,14 @@ import {HttpHeaders} from '@angular/common/http';
 })
 export class VehiclesListDetailComponent implements OnInit {
   idVeh = '';
-
   vehInput = this.fb.group({
-    ID: [''],
+    ID: [{value: '', disabled: true}],
     LPC: [''],
     TenantID: [''],
     Color: [''],
     Lable: [''],
     KindOf: [''],
-    CurrentKM: [''],
+    CurrentKM: [{value:'', disabled: true}],
     PricePerDay: [''],
     PricePerKm: [''],
     CarStatus: ['']
@@ -36,8 +35,9 @@ export class VehiclesListDetailComponent implements OnInit {
   ngOnInit() {
      this.idVeh = this.activatedRoute.snapshot.paramMap.get('idVeh');
      this.vehicleService.getVehicleById(this.idVeh).subscribe(veh => {
-      //  console.log(veh);
-       this.vehInput.setValue(veh);
+      //  console.log(veh.Data);
+       this.vehInput.setValue(veh["Data"]);  
+       
      });
   }
 
@@ -47,6 +47,5 @@ export class VehiclesListDetailComponent implements OnInit {
         alert("Cập nhật thành công");
       }
     );
-    // console.log(this.vehInput.value);
   }
 }

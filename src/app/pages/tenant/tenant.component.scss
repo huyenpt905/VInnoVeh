@@ -11,6 +11,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+   
   }
   &__item {
     width: calc(100%/3 - 3px);
@@ -43,8 +44,8 @@
       background:#0286c7;
     }
   }
-  &__link {
-
+  .active {
+    background:#0286c7;
   }
   &__txt {
     display: none;

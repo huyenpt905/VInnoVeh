@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="tab-content">
+    <div class="tab-pane active">
+      <!-- Tables begin -->
+      <!--scss: generic-->
+      <table class="table">
+        <thead class="table__head">
+          <tr class="table__row">
+            <th class="table__cell table__cell--head" scope="col">Số điện thoại</th>
+            <th class="table__cell table__cell--head" scope="col">Ngày trả</th>
+            <th class="table__cell table__cell--head" scope="col">Trả trước</th>
+            <th class="table__cell table__cell--head" scope="col">Số lượng</th>
+            <th class="table__cell table__cell--head" scope="col">Chi phí</th>
+            <th class="table__cell table__cell--head" scope="col"></th>
+          </tr>
+        </thead>
+        <tbody class="table__body" *ngFor="let bill of bills">
+          <tr class="table__row">
+            <th class="table__cell table__cell--head table__cell--spanned" colspan="7">
+              Ngày bắt đầu: <span>{{ bill.StartTime * 1000 | date: "dd/MM/yyyy" }}</span>
+            </th>
+          </tr>
+          <tr class="table__row">
+            <th class="table__cell table__cell--head" scope="row" data-title="Khách hàng">
+              <span>{{ bill.CusFirstname }} </span><span>{{ bill.CusLastname }}</span>
+            </th>
+            <th class="table__cell table__cell--head" scope="row" data-title="Số điện thoại">
+              {{ bill.CustomerPhone }}
+            </th>
+
+            <td class="table__cell" data-title="Ngày trả">
+              <span>{{ bill.StopTime * 1000 | date: "dd/MM/yyyy" }}</span>
+            </td>
+            <td class="table__cell" data-title="Trả trước">
+              {{ bill.Prepay }}.000 VND
+            </td>
+            <td class="table__cell">
+              <p>Thanh toán thành công</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!--end-table-->
+    </div>
+  </div>
+</div>

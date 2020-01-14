@@ -7,14 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tenant.component.scss']
 })
 export class TenantComponent implements OnInit {
-  // tenants: any = [];
   constructor() { }
 
   ngOnInit() {
-    // this.tenantService.getTenant().subscribe(data => {
-    //   console.log(data);
-    //   this.tenants = data;
-    // });
+  
   }
 
 }

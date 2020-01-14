@@ -5,9 +5,16 @@
   width: 100%;
   padding: 1rem 0;
 
+  .add-bill {
+    margin-left: auto;
+    // background-color: $c-main;
+    // color: #fff;
+  }
+
   .owner-tab-wrap {
     border-bottom: 1px solid $c-main;
     margin-bottom: 1rem;
+    cursor: pointer;
   }
 
   .owner-tab {

@@ -1,0 +1,25 @@
+.bill {
+    &__img {
+      display: flex;
+      img {
+        display: inline-block;
+        width: 400px;
+        height: 300px;
+        overflow: hidden;
+        padding: 10px;
+      }
+    }
+  
+    &__input {
+      display: inline-block;
+      width: 45%;
+      margin-right: 1rem;
+    }
+  
+    &__btn {
+      width: 200px;
+      text-align: center;
+      margin: 1rem 0 2rem 0;
+    }
+  }
+  
