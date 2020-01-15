@@ -20,9 +20,10 @@
       <div class="col-md-4" *ngFor="let vehicle of vehicles">
         <div class="vehicles__item">
           <img class="img-fluid" src="../../../../assets/img-xe.jpg" alt="ảnh xe">
+          <p class="vehicles__txt mt-2">Mã xe: {{ vehicle.ID }} </p>
           <p class="vehicles__txt">Biển số: {{ vehicle.LPC }} </p>
           <p class="vehicles__txt">Nhãn hiệu: {{ vehicle.Lable }}</p>
-          <p class="vehicles__txt">Màu: {{ vehicle.Color }}</p>
+          <p class="vehicles__txt">Số công tơ mét hiện tại: {{ vehicle.CurrentKM }}</p>
           <p>Trạng thái: 
             <span class="font-weight-bold"> {{ vehicle.CarStatus }} </span>
             <span class="icon-edit" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>

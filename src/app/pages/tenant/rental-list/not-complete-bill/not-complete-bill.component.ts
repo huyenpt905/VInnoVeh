@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { BillModel } from "src/app/models/bill.model";
 import { BillService } from "src/app/services/bill.service";
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: "app-not-complete-bill",
@@ -9,7 +10,9 @@ import { BillService } from "src/app/services/bill.service";
 })
 export class NotCompleteBillComponent implements OnInit {
   bills: BillModel[];
+  billID: number;
   currentKM;
+  isCost;
   eventValue: any;
   idBill: number;
   dataRes;
@@ -28,9 +31,17 @@ export class NotCompleteBillComponent implements OnInit {
     this.idBill = id;
   }
 
-  checkoutThisBill() {
+  checkoutThisBill(id: number) {
+    this.billID = id;
     this.billService.checkout(this.idBill, this.eventValue).subscribe(data => {
       this.dataRes = data["Data"];
+      this.isCost = data["Data"].Cost;
     });
+  }
+
+  checkIsCost(id: number): boolean {
+     
+    return this.billID === id;
+    // return this.dataRes.ID = id;
   }
 }

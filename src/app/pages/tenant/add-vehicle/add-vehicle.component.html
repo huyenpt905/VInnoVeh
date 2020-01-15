@@ -8,10 +8,10 @@
 </div>
 <div class="container">
   <form class="vehicle" [formGroup]="vehAddInput" (ngSubmit)="addVehicle()">
-    <div class="vehicle__img">
-     <!-- <img src="http://35.220.185.112:2234/static/images/4">   -->
-      <img [src]="imagePreview" alt="">
-      <form >
+    <!-- <div class="vehicle__img">
+      <img src="http://35.220.185.112:2234/static/images/4">  
+      <img [src]="imagePreview" alt=""> -->
+      <!-- <form >
         <div class="form-group">
           <label for="veh-image">Ảnh</label>
           <input 
@@ -24,8 +24,8 @@
           (change)="onFileSelected($event.target.files)">
         </div>
         <button type="button" (click)="imageInput.click()">Chọn ảnh</button>
-      </form>
-    </div>
+      </form> -->
+    <!-- </div>  -->
     <label class="vehicle__input">Biển số:
       <input formControlName="LPC" class="form-control" type="text">
     </label>

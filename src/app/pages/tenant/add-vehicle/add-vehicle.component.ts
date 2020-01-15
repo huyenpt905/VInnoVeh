@@ -45,7 +45,7 @@ export class AddVehicleComponent implements OnInit {
     data.CurrentKM = parseInt(data.CurrentKM);
     this.vehicleService.addVehicle(data).subscribe(
       function() {
-        alert('Thêm thành công');
+        alert('Thêm xe thành công !');
         // this.vehAddInput.reset(this.vehAddInput.value);
         // this.router.navigate(["''"]);
       }
@@ -57,9 +57,6 @@ export class AddVehicleComponent implements OnInit {
     this.vehicleService.addImage(imgData).subscribe();
     
   }
-  // onFileSelected(data){
-  //   // console.log("data", data)
-  // }
 
   onFileSelected(data) {
     this.imgInput = data;

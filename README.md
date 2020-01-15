@@ -1,8 +1,17 @@
 # VRentVehicle
 ``VinFast mở dịch vụ cho thuê xe máy và xe ô tô tự lái.
  Khách hàng cần đăng ký thông tin chi tiết kết nối tài khoản VinID,
-thời gian thuê từ ngày nào đến ngày nào, địạ điểm nhận xe, loại phương tiện. Chi phí sẽ tính theo số km chạy.
+Thời gian thuê từ ngày nào đến ngày nào, địa điểm nhận xe, loại phương tiện. Chi phí sẽ tính theo số km chạy.
 ``
+
+##
+- Angular 8
+- HTML5
+- CSS3
+- SASS
+- Naming convention: BEM.
+- Source code Repository: Github
+- Package manager: NPM
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.18.
 

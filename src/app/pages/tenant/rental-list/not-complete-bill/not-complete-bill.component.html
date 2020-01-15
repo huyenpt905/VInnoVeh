@@ -34,28 +34,23 @@
                         <td class="table__cell" data-title="Trả trước">
                             {{ bill.Prepay }}.000 VND
                         </td>
-                        <td class="table__cell" data-title="Số công tơ mét">
+                        <td class="table__cell" data-title="Số công tơ mét sau chạy">
                             <label class="vehicle__input font-weight-bold">
-                                <input 
-                                #currentKM 
-                                (input)="inputValueF(currentKM, bill.ID)" 
-                                class="form-control"
-                                type="text">
+                                <input #currentKM (input)="inputValueF(currentKM, bill.ID)" class="form-control"
+                                    type="text">
                             </label>
                         </td>
                         <td class="table__cell checkout">
                             <div class="checkout-btn">
-                                <a 
-                                (click)="checkoutThisBill()" 
-                                class="btn">Thanh toán</a>
-                                <!-- <p *ngIf="isCheckout"> {{ dataRes.Cost }} </p> -->
+                                <button (click)="checkoutThisBill(bill.ID)" class="btn">Thanh toán</button>
                             </div>
+                            <p *ngIf="checkIsCost(bill.ID)">Số tiền cần thanh toán: {{ isCost }}.000 VND</p>
                         </td>
                     </tr>
                 </tbody>
             </table>
             <!--end-table-->
-         
+
         </div>
     </div>
 </div>

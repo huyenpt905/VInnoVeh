@@ -23,7 +23,7 @@
   }
   &__item {
     padding:20px;
-    text-align: center;
+    // text-align: center;
     margin:10px 0;
     position: relative;
 
@@ -50,9 +50,6 @@
     }
     .seemore {
       position: absolute;
-      //top: 50%;
-      //left: 50%;
-      //transform: translate(-50%, -50%);
       top: 10px;
       left: 10px;
       width: 40px;
@@ -61,6 +58,7 @@
       background-color:  #dc4e22;
       line-height: 40px;
       transition: 0.4s ease;
+      text-align: center;
 
       &:hover{
         transform: scale(1.1);

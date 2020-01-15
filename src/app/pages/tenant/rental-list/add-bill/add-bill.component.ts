@@ -20,13 +20,16 @@ export class AddBillComponent implements OnInit {
     Lastname: ['', Validators.required]
   });
 
-  constructor(private billService: BillService, private fb: FormBuilder) {}
+  constructor(
+    private billService: BillService, 
+    private fb: FormBuilder
+    ) {}
 
   ngOnInit() {}
 
   addBill() {
     function toTimestamp(strDate){
-      var datum = Date.parse(strDate);
+      let datum = Date.parse(strDate);
       return datum/1000;
      }
    let data = this.addBillForm.value;
@@ -35,10 +38,11 @@ export class AddBillComponent implements OnInit {
    data.Prepay = parseInt(data.Prepay);
    data.CarID = parseInt(data.CarID);
    data.TenantID = parseInt(data.TenantID);
+  
 
    this.billService.addBill(this.addBillForm.value).subscribe(
      function() {
-       alert("them thành công");
+       alert("Thêm hóa đơn thành công");
      }
    );
     // console.log(data);

@@ -23,7 +23,7 @@ export class VehicleService {
 
   getAll(): Observable<VehicleModel[]> {
     return this.http.get<VehicleModel[]>(
-      `${this.API}/cars/available/${this.userService.tenantID}`,
+      `${this.API}/cars/tenant/${this.userService.tenantID}`,
       httpOptions
     );
   }

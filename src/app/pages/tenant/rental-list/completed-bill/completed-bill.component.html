@@ -6,11 +6,12 @@
       <table class="table">
         <thead class="table__head">
           <tr class="table__row">
+            <th class="table__cell table__cell--head" scope="col">Khách hàng</th>
             <th class="table__cell table__cell--head" scope="col">Số điện thoại</th>
             <th class="table__cell table__cell--head" scope="col">Ngày trả</th>
             <th class="table__cell table__cell--head" scope="col">Trả trước</th>
-            <th class="table__cell table__cell--head" scope="col">Số lượng</th>
-            <th class="table__cell table__cell--head" scope="col">Chi phí</th>
+            <th class="table__cell table__cell--head" scope="col">Mã xe thuê</th>
+            <th class="table__cell table__cell--head" scope="col">Trạng thái hóa đơn</th>
             <th class="table__cell table__cell--head" scope="col"></th>
           </tr>
         </thead>
@@ -33,6 +34,9 @@
             </td>
             <td class="table__cell" data-title="Trả trước">
               {{ bill.Prepay }}.000 VND
+            </td>
+            <td class="table__cell">
+              <p> {{ bill.CarID }}</p>
             </td>
             <td class="table__cell">
               <p>Thanh toán thành công</p>

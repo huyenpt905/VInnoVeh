@@ -21,9 +21,6 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 
-    @include respond-to(break-md) {
-
-    }
     padding: 1rem 0;
     a{
       color:#fff;
@@ -48,7 +45,7 @@
     background:#0286c7;
   }
   &__txt {
-    display: none;
+    // display: none;
     @include respond-to(break-lg) {
       display: inline;
     }
