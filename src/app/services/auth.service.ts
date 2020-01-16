@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
 import { parseHostBindings } from '@angular/compiler';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -25,6 +26,34 @@ export class AuthService {
   private API = "http://35.220.185.112:2234/api";
 
   constructor(private http: HttpClient) { }
+  cachedRequests: Array<HttpRequest<any>> = [];
+  public getToken():string {
+    return localStorage.getItem('jwtToken');
+  }
+
+  public isAuthenticated():boolean {
+    const token = this.getToken();
+    return this.tokenNotExpired(token);
+  }
+
+  public tokenNotExpired(token) {
+    if(token) {
+      var jwtHelper = new JwtHelperService();
+      return token != null && !jwtHelper.isTokenExpired(token);
+    }else {
+      return false;
+    }
+    
+  }
+
+  public collectFailedRequest(request): void {
+    this.cachedRequests.push(request);
+  }
+
+  public retryFailedRequests(): void {
+    // retry the requests. this method can
+    // be called after the token is refreshed
+  }
 
   signup(phoneNumber: string, password: string) {
     return this.http.post<AuthResponeData>(`${this.API}/customer`, {
